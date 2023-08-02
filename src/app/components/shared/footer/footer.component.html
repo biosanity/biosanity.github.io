@@ -1,0 +1,48 @@
+<footer class="footer">
+  <div class="social-icons">
+    <a href="https://github.com/biosanity" rel="noopener" target="_blank">
+      <fa-icon
+        class="social-icons fa-icons"
+        [icon]="faSquareGithub"
+        size="xl"
+      ></fa-icon>
+    </a>
+    <a
+      href="https://linkedin.com/in/scott-crisp"
+      rel="noopener"
+      target="_blank"
+    >
+      <fa-icon
+        class="social-icons fa-icons"
+        [icon]="faLinkedin"
+        size="xl"
+      ></fa-icon>
+    </a>
+    <a [routerLink]="['/contact']">
+      <fa-icon
+        class="social-icons fa-icons"
+        [icon]="faSquareEnvelope"
+        size="xl"
+      ></fa-icon>
+    </a>
+    <a (click)="onToggle()">
+      <fa-icon
+        class="social-icons fa-icons"
+        *ngIf="darkMode$ | async; else lightModeIcon"
+        [icon]="faSun"
+        size="xl"
+      >
+      </fa-icon>
+      <ng-template #lightModeIcon>
+        <fa-icon
+          class="social-icons fa-icons"
+          [icon]="faMoon"
+          size="xl"
+        ></fa-icon>
+      </ng-template>
+    </a>
+  </div>
+  <div class="copyright">
+    &copy; 2023 | Built with Angular & Django Rest Framework
+  </div>
+</footer>

@@ -1,0 +1,8 @@
+<div clas="app-container">
+  <app-navbar></app-navbar>
+  <app-toast-message aria-live="polite" aria-atomic="true"></app-toast-message>
+  <main [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+  <app-footer></app-footer>
+</div>

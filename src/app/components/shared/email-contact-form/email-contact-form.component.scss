@@ -1,0 +1,41 @@
+.email-form {
+ border-radius: 8px;
+ padding: 1.5rem;
+ overflow: hidden;
+}
+
+.email-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  width: 100%;
+  padding: 6px;
+
+  &:focus {
+    border-color: rgb(200, 200, 200);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px lightgrey;
+  }
+
+  &:hover {
+    border-color: rgb(200, 200, 200);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px lightgrey;
+  }
+}
+
+.char-remaining {
+  font-size: 13px;
+}
+
+button {
+  background-color: #ed5459;
+  border-color: #ed5459;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.email-input:not(.dark-mode-preloading) {
+  transition: all 0.3s linear;
+}
+

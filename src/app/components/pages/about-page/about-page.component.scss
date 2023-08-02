@@ -1,0 +1,28 @@
+h2 {
+  text-align: left;
+  font-family: 'Exo-Bold';
+}
+
+p {
+  margin: 0;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tech-list-container {
+  display: flex;
+}
+
+.tech-list {
+  flex: 1;
+  margin-right: 20px;
+
+  & li {
+    padding: 0.2rem;
+    list-style: none;
+    text-align: left;
+  }
+}

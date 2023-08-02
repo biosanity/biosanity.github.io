@@ -1,0 +1,45 @@
+<form class="email-form" [formGroup]="emailForm">
+  <input
+    class="email-input form-control"
+    type="text"
+    placeholder="First Name"
+    formControlName="first_name"
+    [class.is-invalid]="firstNameControl?.invalid && firstNameControl?.touched"
+  >
+  <input
+    class="email-input form-control"
+    type="text"
+    placeholder="Last Name"
+    formControlName="last_name"
+    [class.is-invalid]="lastNameControl?.invalid && lastNameControl?.touched"
+  >
+  <input
+    class="email-input form-control"
+    type="text"
+    placeholder="Email Address"
+    formControlName="replyto"
+    [class.is-invalid]="replytoControl?.invalid && replytoControl?.touched"
+  >
+  <input
+    class="email-input form-control"
+    type="text" placeholder="Subject"
+    formControlName="subject"
+    [class.is-invalid]="subjectControl?.invalid && subjectControl?.touched"
+  >
+  <textarea
+    class="email-input form-control"
+    placeholder="Message"
+    formControlName="content"
+    [class.is-invalid]="contentControl?.invalid && contentControl?.touched"
+  ></textarea>
+  <div class="char-remaining float-start text-secondary">
+    Remaining characters: {{ getRemainingCharacters() }}
+  </div>
+  <button
+    class="btn btn-danger mt-4 mb-1"
+    type="submit"
+    style=" float: right;"
+    (click)="handleSubmit()"
+    [disabled]="!emailForm.valid"
+    >Send Email</button>
+</form>

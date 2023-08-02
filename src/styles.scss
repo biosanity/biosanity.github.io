@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Exo';
+  src: url('./assets/fonts/exo-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo-Bold';
+  src: url('./assets/fonts/exo-bold.ttf') format('truetype');
+}
+
+@mixin accent-gradient {
+  background: rgb(255, 108, 171);
+  background: linear-gradient(90deg, rgba(255,108,171,1) 0%, rgba(117,91,180,1) 75%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+// Global variables for light/dark mode.
+:root {
+  --dark-mode-bg: rgba(23,23,23,255);
+  --light-mode-border-color: rgba(0, 0, 0, 0.05);
+  --dark-mode-shadow: 0 0 10px 0px rgba(60,58,70,255);
+}
+
+.text-highlight-gradient {
+  font-family: 'Exo-Bold' !important;
+  @include accent-gradient;
+}
+
+body:not(.dark-mode-preloading) {
+  transition: all 0.3s linear;
+}
+
+
+// Light mode colour global styles
+body.light-mode {
+  background-color: white;
+  color: black;
+
+  .navbar, .footer, .email-input {
+    background-color: white;
+
+    a {
+      color: black;
+    }
+  }
+
+  .email-form {
+    box-shadow: var(--light-mode-shadow);
+  }
+}
+
+// Dark mode colour global styles
+body.dark-mode {
+  background-color: var(--dark-mode-bg);
+  color: white;
+
+  .navbar, .footer {
+    background-color: var(--dark-mode-bg);
+
+    a {
+      color: white;
+    }
+  }
+
+  .navbar-toggler {
+    color: white;
+  }
+
+  .sc-profile-pic {
+    box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.58);
+  }
+
+  .card, .email-form {
+    box-shadow: var(--dark-mode-shadow);
+  }
+
+  .email-input {
+    border-color: #403e4d;
+    background-color: var(--dark-mode-bg);
+    color: white;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

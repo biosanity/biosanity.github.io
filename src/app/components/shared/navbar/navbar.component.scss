@@ -1,0 +1,51 @@
+@use '../../../../styles.scss' as global;
+
+* {
+  font-family: 'Exo-Bold';
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 15px 5% 15px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-brand img {
+  width: 50px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  text-align: center;
+}
+
+.nav-link:hover {
+  transition: 0.3s;
+  @include global.accent-gradient;
+}
+
+.active-link {
+  @include global.accent-gradient;
+}
+
+.navbar-toggler {
+  border: none;
+  color: black;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar:not(.dark-mode-preloading) {
+  transition: all 0.3s linear;
+}
+
