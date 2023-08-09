@@ -1,2 +1,17 @@
-<p class="mb-5">This is where I would put my projects...</p>
-<img src="../../../../assets/icons/if-i-had-one.jpg">
+<div class="container">
+  <div class="hover-card" *ngFor="let project of projectsList">
+    <a href="{{ project.url }}" target="_blank" rel="noreferrer noopener">
+      <img src="../../../../assets/thumbnails/{{ project.imgTag }}.jpg" />
+      <div class="overlay">
+        <h4 style="color: white">{{ project.name }}</h4>
+        <ul>
+          <li *ngFor="let item of project.tech; let last = last">
+            {{ item }}
+            <ng-container *ngIf="!last">&nbsp;|&nbsp;</ng-container>
+          </li>
+        </ul>
+        <p>{{ project.description }}</p>
+      </div>
+    </a>
+  </div>
+</div>
