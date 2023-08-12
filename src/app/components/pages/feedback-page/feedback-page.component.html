@@ -4,14 +4,14 @@
     My experiences in performance management have taught me the importance of
     feedback.
   </p>
-  <p class="mb-4">
+  <p class="mb-5">
     Please take some time to look at some of the feedback I have received from
     my colleagues over the years:
   </p>
   <div class="card-container">
     <div
       class="card mb-4 p-2"
-      *ngFor="let item of (feedbackList$ | async)?.results"
+      *ngFor="let item of (feedbackList$ | async)?.results?.slice().reverse()"
     >
       <div class="card-body">
         <p>{{ item.feedback }}</p>
