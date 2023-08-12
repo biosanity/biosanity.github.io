@@ -5,12 +5,6 @@ img {
 }
 
 header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-
   > h2, > p {
     margin: 0;
     text-align: left;
@@ -22,12 +16,12 @@ header {
 }
 
 .container {
-  width: 100vw;
+  max-width: 70vh;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .hover-card {
