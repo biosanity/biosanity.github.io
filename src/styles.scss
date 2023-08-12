@@ -32,6 +32,10 @@
   @include accent-gradient;
 }
 
+body {
+  font-family: 'Exo';
+}
+
 body:not(.dark-mode-preloading) {
   transition: all 0.3s linear;
 }
