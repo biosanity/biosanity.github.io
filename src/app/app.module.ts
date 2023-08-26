@@ -41,7 +41,7 @@ import { ToastMessageComponent } from './components/shared/toast-message/toast-m
     EmailContactFormComponent,
     NgbModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
